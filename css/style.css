@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "light-font";
+  src: url(../fonts/Quantico-Regular.ttf);
+}
+
+@font-face {
+  font-family: "bold-font";
+  src: url(../fonts//Quantico-Bold.ttf);
+}
+
+:root {
+  --couleurJaune: rgba(255, 196, 0, 0.932);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    light-font,
+    sans sérif;
+}
+
+header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/bannière.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 0 140px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+nav .liens {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .liens a {
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+nav .liens a:hover {
+  color: var(--couleurJaune);
+}
+
+header .texte p {
+  color: white;
+  font-size: 60px;
+  font-family: bold-font, sans-serif;
+  color: white;
+}
+
+header .texte p span {
+  background-color: green;
+  padding: 0 5px;
+}
+
+main {
+  background-color: rgb(254, 255, 255);
+  font-size: 1.3rem;
+  padding: 70px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+h1 span {
+  color: green;
+}
+
+.description {
+  text-align: center;
+  width: 1000px;
+  margin: 20px auto;
+}
+
+.description p {
+  margin-bottom: 15px;
+}
+
+.produits {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  padding: 20px 70px;
+}
+
+.produit {
+  background-color: green;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 210px;
+  width: 205px;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+}
+
+.produit p {
+  text-transform: uppercase;
+}
+
+.produit span,
+.produit svg {
+  height: 80px;
+  width: 80px;
+  color: white;
+}

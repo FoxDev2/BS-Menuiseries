@@ -1,0 +1,9 @@
+duplication de ligne : alt + shift + bas
+
+utiliser cdn.js pour l'intégration de bibliothèques divers 
+font awesome, la référence des icones 
+remix icons la référence en mode gratuit
+
+Les sites d'ajout d'animations css st nombreuses. On a :
+https://michalsnik.github.io/aos/ 
+animate css
