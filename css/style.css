@@ -21,6 +21,10 @@
     sans sérif;
 }
 
+body {
+  width: 100vw;
+}
+
 header {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -73,12 +77,14 @@ header .texte p span {
 main {
   background-color: rgb(254, 255, 255);
   font-size: 1.3rem;
-  padding: 70px;
+  /* padding: 70px; */
+  position: relative;
 }
 
 h1 {
   font-size: 2.2rem;
   text-align: center;
+  margin-top: 70px;
 }
 
 h1 span {
@@ -100,7 +106,9 @@ h1 span {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 40px;
-  padding: 20px 70px;
+  padding: 30px 140px 20px;
+  width: max-content;
+  margin: auto;
 }
 
 .produit {
@@ -126,4 +134,268 @@ h1 span {
   height: 80px;
   width: 80px;
   color: white;
+}
+
+.avis {
+  background-color: black;
+  height: 380px;
+  width: 100vw;
+  margin-top: 50px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.avis h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.avis-1 {
+  width: 60%;
+  height: 60%;
+  padding: 5px;
+  background-color: rgb(233, 236, 239);
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.avis-1 p {
+  padding: 5px;
+}
+
+.avis-1 p span {
+  font-weight: bold;
+}
+
+.realisations {
+  padding: 70px;
+  text-align: center;
+}
+
+.realisations h2 {
+  margin-bottom: 40px;
+}
+
+.pictures {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0 auto;
+  width: max-content;
+  gap: 10px;
+}
+
+.pictures img {
+  height: 280px;
+  width: 290px;
+}
+
+.realisations a {
+  display: block;
+  padding: 7px 15px;
+  background-color: green;
+  color: white;
+  margin: 30px auto 0;
+  width: max-content;
+  text-decoration: none;
+  border-radius: 7px;
+}
+
+.realisations a:hover {
+  background-color: black;
+  font-size: 1.4rem;
+  transition: all 0.35s ease;
+}
+
+footer .qualites {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/footer.png);
+  background-size: cover;
+  height: 100%;
+  padding: 70px;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer .qualites h2 {
+  margin-bottom: 70px;
+  font-size: 1.94rem;
+}
+
+.ligne-flex-qualite {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.ligne-flex-qualite .qualite {
+  width: 230px;
+  height: 260px;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.ligne-flex-qualite .qualite svg {
+  height: 50px;
+  width: 50px;
+  align-self: last baseline;
+}
+
+.ligne-flex-qualite .qualite p span {
+  text-align: left;
+}
+
+.ligne-flex-qualite .qualite p {
+  text-align: justify;
+}
+
+.contacts {
+  background-color: black;
+  padding: 25px;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.contacts .footer-box {
+  padding: 15px;
+  height: max-content;
+  width: 270px;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: first baseline;
+}
+
+.contacts .footer-box-1 {
+  background-color: black;
+}
+
+.contacts .footer-box-1 .contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.contacts .footer-box-1 .contact-link:hover {
+  color: var(--couleurJaune);
+}
+
+.contacts .footer-box-1 .contact-link svg {
+  height: 24px;
+  width: 24px;
+}
+
+.logo-link img {
+  height: 80px;
+  width: 250px;
+}
+
+.contacts .footer-box-2 {
+  color: white;
+  width: 230px;
+}
+
+.footer-box-2 ul {
+  list-style: none;
+}
+
+.footer-box-2 ul li {
+  margin-bottom: 5px;
+}
+
+.contacts .footer-box-3 {
+  width: 240px;
+  gap: 25px;
+  justify-content: flex-start;
+  color: white;
+}
+
+.footer-box-3 .social-bloc .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 18px;
+}
+
+.social div {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: green;
+  border-radius: 5px;
+}
+
+.social div a {
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social div a:hover {
+  color: white;
+}
+
+.social div a svg {
+  height: 28px;
+  width: 28px;
+}
+
+.social div:hover {
+  background-color: black;
+  color: white;
+}
+
+.copyright {
+  height: 60px;
+  background-color: black;
+  border-top: 1px solid white;
+  padding: 20px 100px;
+  color: white;
+}
+
+.copyright a {
+  font-style: italic;
+  color: inherit;
+}
+
+.copyright a:hover {
+  color: var(--couleurJaune);
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1340px) {
+  .produits {
+    padding: 30px 100px 20px;
+    gap: 20px;
+  }
+
+  .realisations {
+    padding: 50px;
+  }
+
+  .pictures img {
+    height: 250px;
+    width: 260px;
+  }
 }
