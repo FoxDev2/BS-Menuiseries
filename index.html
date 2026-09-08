@@ -32,33 +32,35 @@
   </head>
   <body>
     <header>
-      <nav>
-        <!-- logo -->
-        <div class="logo">
-          <a href="./index.html">
-            <img
-              src="./images/logo3.png"
-              alt="Logo du site web"
-              width="250"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            />
-          </a>
-        </div>
-        <!-- navigation -->
-        <div class="liens" data-aos="fade-left" data-aos-duration="1000">
-          <a href="#repère-produits">Nos produits</a>
-          <a href="#realisations">Nos realisations</a>
-          <a href="#qualites">Nos atouts</a>
-          <a href="#contacts">Nous contacter</a>
-        </div>
-      </nav>
+      <div class="header-container">
+        <nav>
+          <!-- logo -->
+          <div class="logo">
+            <a href="./index.html">
+              <img
+                src="./images/logo3.png"
+                alt="Logo du site web"
+                width="250"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </a>
+          </div>
+          <!-- navigation -->
+          <div class="liens" data-aos="fade-left" data-aos-duration="1000">
+            <a href="#produits">Nos produits</a>
+            <a href="#realisations">Nos realisations</a>
+            <a href="#qualites">Nos atouts</a>
+            <a href="#contacts">Nous contacter</a>
+          </div>
+        </nav>
 
-      <div class="texte">
-        <p data-aos="zoom-in" data-aos-duration="1150">
-          Votre menuisier pour vos <br />
-          <span>Portails et clôtures |</span>
-        </p>
+        <div class="texte">
+          <p data-aos="zoom-in" data-aos-duration="1150">
+            Votre menuisier pour vos <br />
+            <span>Portails et clôtures |</span>
+          </p>
+        </div>
       </div>
     </header>
     <main>
@@ -74,7 +76,7 @@
           de qualité et effectuée dans les règles de l'art par de véritables
           passionnées du métier.
         </p>
-        <p id="repère-produits">
+        <p>
           Nous sommes fiers de vous offrir bien plus que des services de
           menuiserie. En cas de sinistre, notre équipe dédiée est là pour vous
           aider à réparer rapidement et efficacement les menuiseries
@@ -89,7 +91,7 @@
         data-aos="zoom-in-up"
         data-aos-duration="2000"
       >
-        <div class="produit">
+        <div class="produit" id="produits">
           <span
             class="iconify"
             data-icon="material-symbols:door-open-outline"
@@ -148,15 +150,18 @@
       </section>
       <section class="avis">
         <h2>NOS CLIENTS PARLENT DE NOUS</h2>
-        <div class="avis-1">
-          <p>
-            <span>HELENE B.</span> <br />
-            Je n'ai que des compliments à faire. Outre le prix correct
-            (Remplacement, fenêtres hors normes, volets roulants et portes). Le
-            personnel qu'il soit au téléphone, en commercial, mesureur ou poseur
-            est d'une gentilliesse et d'une compétence formidable. <br />
-            Merci à vous tous, vraiment !
-          </p>
+        <div class="avis-container">
+          <div class="avis-1">
+            <p>
+              <span>HELENE B.</span> <br />
+              Je n'ai que des compliments à faire. Outre le prix correct
+              (Remplacement, fenêtres hors normes, volets roulants et portes).
+              Le personnel qu'il soit au téléphone, en commercial, mesureur ou
+              poseur est d'une gentilliesse et d'une compétence formidable.
+              <br />
+              Merci à vous tous, vraiment !
+            </p>
+          </div>
         </div>
       </section>
       <section class="realisations" id="realisations">
@@ -177,7 +182,7 @@
           <img src="./images/pic7.jfif" alt="Portail décoratif en fer forgé" />
           <img src="./images/pic8.jfif" alt="Garage avec porte sectionnelle" />
         </div>
-        <a href="">DECOUVRIR TOUTES NOS REALISATIONS</a>
+        <a href="">DECOUVREZ PLUS</a>
       </section>
     </main>
     <footer>
@@ -296,10 +301,8 @@
           </div>
         </div>
         <img
+          class="last-logo"
           src="./images/logo-final.png"
-          width="130"
-          height="165"
-          style="margin-left: 30px"
           alt="logo-RGE"
           data-aos="fade-right"
         />

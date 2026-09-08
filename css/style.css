@@ -13,6 +13,7 @@
 }
 
 * {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,10 +30,17 @@ header {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/bannière.png);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+header .header-container {
   height: 100vh;
+  width: 90%;
   background-size: cover;
   background-position: center;
-  padding: 0 140px 70px;
+  padding: 0 0 70px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,7 +63,7 @@ nav .liens a {
   color: white;
   text-decoration: none;
   font-size: 19px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 nav .liens a:hover {
@@ -64,7 +72,7 @@ nav .liens a:hover {
 
 header .texte p {
   color: white;
-  font-size: 60px;
+  font-size: clamp(24px, 3.6vw, 60px);
   font-family: bold-font, sans-serif;
   color: white;
 }
@@ -82,7 +90,7 @@ main {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: clamp(22px, 2.5vw, 40px);
   text-align: center;
   margin-top: 70px;
 }
@@ -92,8 +100,9 @@ h1 span {
 }
 
 .description {
+  padding: 15px;
   text-align: center;
-  width: 1000px;
+  width: 80%;
   margin: 20px auto;
 }
 
@@ -102,18 +111,18 @@ h1 span {
 }
 
 .produits {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 40px;
-  padding: 30px 140px 20px;
-  width: max-content;
+  scroll-margin-top: 30px;
+  width: 80vw;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  gap: 40px;
+  padding: 30px auto 20px;
 }
 
 .produit {
   background-color: green;
-  margin: auto;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -138,7 +147,7 @@ h1 span {
 
 .avis {
   background-color: black;
-  height: 380px;
+  height: max-content;
   width: 100vw;
   margin-top: 50px;
   position: relative;
@@ -149,20 +158,25 @@ h1 span {
 .avis h2 {
   color: white;
   margin-bottom: 10px;
+  font-size: clamp(20px, 2.3vw, 35px);
+}
+
+.avis-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
 }
 
 .avis-1 {
-  width: 60%;
+  width: 80%;
   height: 60%;
   padding: 5px;
   background-color: rgb(233, 236, 239);
   border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  text-wrap: wrap;
 }
 
 .avis-1 p {
@@ -174,29 +188,32 @@ h1 span {
 }
 
 .realisations {
-  padding: 70px;
+  padding: 40px 0 70px;
   text-align: center;
 }
 
 .realisations h2 {
   margin-bottom: 40px;
+  font-size: clamp(20px, 2.3vw, 35px);
 }
 
 .pictures {
+  padding: 0 0 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 0 auto;
-  width: max-content;
-  gap: 10px;
+  width: 80vw;
+  gap: 40px;
 }
 
 .pictures img {
-  height: 280px;
-  width: 290px;
+  margin-inline: auto;
+  height: 300px;
+  width: 300px;
 }
 
 .realisations a {
+  font-size: 1.2rem;
   display: block;
   padding: 7px 15px;
   background-color: green;
@@ -209,7 +226,7 @@ h1 span {
 
 .realisations a:hover {
   background-color: black;
-  font-size: 1.4rem;
+  transform: translateY(-4px);
   transition: all 0.35s ease;
 }
 
@@ -219,7 +236,7 @@ footer .qualites {
     url(../images/footer.png);
   background-size: cover;
   height: 100%;
-  padding: 70px;
+  padding: clamp(27px, 5.12vw, 80px);
   color: white;
   text-align: center;
   font-size: 1rem;
@@ -227,16 +244,19 @@ footer .qualites {
 
 footer .qualites h2 {
   margin-bottom: 70px;
-  font-size: 1.94rem;
+  font-size: clamp(20px, 2.3vw, 35px);
 }
 
 .ligne-flex-qualite {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  /* display: flex;
+  justify-content: center; */
   gap: 25px;
 }
 
 .ligne-flex-qualite .qualite {
+  margin-inline: auto;
   width: 230px;
   height: 260px;
   background-color: green;
@@ -263,17 +283,20 @@ footer .qualites h2 {
 
 .contacts {
   background-color: black;
-  padding: 25px;
+  padding: clamp(20px, 5.12vw, 80px);
   height: max-content;
-  display: flex;
-  justify-content: center;
-  gap: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* display: flex;
+  justify-content: center; */
+  gap: 30px;
 }
 
 .contacts .footer-box {
+  margin-inline: auto;
   padding: 15px;
   height: max-content;
-  width: 270px;
+  width: max-content;
   background-color: green;
   display: flex;
   flex-direction: column;
@@ -283,6 +306,7 @@ footer .qualites h2 {
 
 .contacts .footer-box-1 {
   background-color: black;
+  padding: 0;
 }
 
 .contacts .footer-box-1 .contact-link {
@@ -304,7 +328,7 @@ footer .qualites h2 {
 
 .logo-link img {
   height: 80px;
-  width: 250px;
+  width: 240px;
 }
 
 .contacts .footer-box-2 {
@@ -367,8 +391,15 @@ footer .qualites h2 {
   color: white;
 }
 
+.last-logo {
+  width: 130px;
+  height: 165px;
+  margin-left: 30px;
+  margin-inline: auto;
+}
+
 .copyright {
-  height: 60px;
+  height: max-content;
   background-color: black;
   border-top: 1px solid white;
   padding: 20px 100px;
@@ -384,7 +415,19 @@ footer .qualites h2 {
   color: var(--couleurJaune);
 }
 
-@media screen and (min-width: 1250px) and (max-width: 1340px) {
+@media screen and (max-width: 920px) {
+  header .liens {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .copyright {
+    padding: 20px;
+  }
+}
+
+/* @media screen and (min-width: 1250px) and (max-width: 1340px) {
   .produits {
     padding: 30px 100px 20px;
     gap: 20px;
@@ -398,4 +441,4 @@ footer .qualites h2 {
     height: 250px;
     width: 260px;
   }
-}
+} */
